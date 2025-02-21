@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form</title>
+</head>
+<body>
+    <form id="Student-form">
+        <label for="Fname">Enter Name</label>
+        <input type="text" placeholder="Enter your name" id="Fname"><br>
+        
+        <label for="Fname1">Enter Password</label>
+        <input type="password" placeholder="Enter your password" id="Fname1"><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        
+        document.body.style.fontFamily = "Arial, sans-serif";
+        document.body.style.display = "flex";
+        document.body.style.justifyContent = "center";
+        document.body.style.alignItems = "center";
+        document.body.style.height = "100vh";
+        document.body.style.backgroundColor = "#f0f0f0";
+
+        var form = document.getElementById("Student-form");
+        form.style.backgroundColor = "white";
+        form.style.padding = "20px";
+        form.style.borderRadius = "10px";
+        form.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.1)";
+        form.style.display = "flex";
+        form.style.flexDirection = "column";
+        form.style.gap = "10px";
+        form.style.width = "250px";
+
+        var inputs = document.querySelectorAll("input");
+        inputs.forEach(input => {
+            input.style.padding = "8px";
+            input.style.border = "1px solid #ccc";
+            input.style.borderRadius = "5px";
+        });
+
+        var button = document.querySelector("button");
+        button.style.padding = "10px";
+        button.style.backgroundColor = "#007bff";
+        button.style.color = "white";
+        button.style.border = "none";
+        button.style.borderRadius = "5px";
+        button.style.cursor = "pointer";
+
+        button.addEventListener("mouseover", function() {
+            button.style.backgroundColor = "#0056b3";
+        });
+
+        button.addEventListener("mouseout", function() {
+            button.style.backgroundColor = "#007bff";
+        });
+
+        
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert("Form submitted");
+            form.reset();
+        });
+    </script>
+</body>
+</html>
